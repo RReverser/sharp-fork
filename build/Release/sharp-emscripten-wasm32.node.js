@@ -8405,9 +8405,9 @@ var ___cxa_can_catch = Module["___cxa_can_catch"] = asm["__cxa_can_catch"];
 
 var ___cxa_is_pointer_type = Module["___cxa_is_pointer_type"] = asm["__cxa_is_pointer_type"];
 
-var ___start_em_js = Module["___start_em_js"] = 1981556;
+var ___start_em_js = Module["___start_em_js"] = 1995796;
 
-var ___stop_em_js = Module["___stop_em_js"] = 1991984;
+var ___stop_em_js = Module["___stop_em_js"] = 2006224;
 
 function invoke_vii(index, a1, a2) {
  var sp = stackSave();
@@ -8839,6 +8839,17 @@ function invoke_vidii(index, a1, a2, a3, a4) {
  }
 }
 
+function invoke_viiiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) {
+ var sp = stackSave();
+ try {
+  getWasmTableEntry(index)(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0) throw e;
+  _setThrew(1, 0);
+ }
+}
+
 function invoke_viff(index, a1, a2, a3) {
  var sp = stackSave();
  try {
@@ -9153,17 +9164,6 @@ function invoke_iiiiiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11
  var sp = stackSave();
  try {
   return getWasmTableEntry(index)(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0) throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_viiiiiiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) {
- var sp = stackSave();
- try {
-  getWasmTableEntry(index)(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0) throw e;
